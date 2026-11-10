@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run word-frequency property tests on save",
+      "description": "Re-checks AC-3 (P-1 to P-4) whenever Python changes, so a regression is caught before it reaches pomodoro-web or a commit.",
+      "trigger": "PostFileSave",
+      "matcher": "word-frequency-cli/.*\\.py$",
+      "action": {
+        "type": "command",
+        "command": "cd word-frequency-cli && python3 -m unittest -q test_properties"
+      }
+    }
+  ]
+}
