@@ -1,0 +1,6 @@
+# .kiro is committed intentionally — do not ignore it.
+.DS_Store
+*.pyc
+__pycache__/
+node_modules/
+dist/
